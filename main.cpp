@@ -87,15 +87,14 @@ int main() {
                 while (crupier.calcularValorManoCrupier() < 17) {
                     crupier.pedirCarta(mazo);
                 }
-                cout << "\n======================================="<< endl;
-                cout << "Mano completa del crupier:" << endl;
-                crupier.mostrarMano();
-                cout << "======================================="<< endl;
-
                 // Determinar ganador con el método del menú
                 string resultado = menu.determinarGanador(jugador, crupier, monto);
                 jugador.actualizarSaldo(resultado, monto);
             }
+            cout << "\n======================================="<< endl;
+            cout << "Mano completa del crupier:" << endl;
+            crupier.mostrarMano();
+            cout << "======================================="<< endl;
         }
 
         cout << "\n=== Tu saldo actual: $" << jugador.getSaldo() << " ===" << endl;
