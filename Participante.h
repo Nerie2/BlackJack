@@ -8,7 +8,8 @@ Clase:
 
 Responsabilidades:
     - Calcular el valor del participante (crupier o jugador).
-    - Mostrar las cartas del crupier y del jugador.
+    - Mostrar las cartas del crupier y.
+    - Controlar la lógica del turno del crupier.
 
 Creadores:
     - Andrés Felipe Rodríguez García 2539555
