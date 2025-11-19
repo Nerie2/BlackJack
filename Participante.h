@@ -7,15 +7,8 @@ Clase:
     Participante
 
 Responsabilidades:
-    - Representar la banca o distribuidor del juego.
-    - Repartir las cartas iniciales al jugador y a sí mismo.
-    - Calcular el valor de su propia mano.
-    - Mostrar las cartas del crupier.
-    - Controlar la lógica del turno del crupier.
-
-Colaboración:
-    - Mazo (para repartir cartas).
-    - Jugador (para interactuar y repartir cartas iniciales).
+    - Calcular el valor del participante (crupier o jugador).
+    - Mostrar las cartas del crupier y del jugador.
 
 Creadores:
     - Andrés Felipe Rodríguez García 2539555
@@ -37,9 +30,11 @@ private:
     vector<Carta> mano; // Cartas del crupier
     
 public:
+    Participante ();
+    virtual ~Participante() = default;
     // Metodos
     int calcularValorMano() const;               // Valor total de la mano
     void pedirCarta(Mazo &mazo);                     // Toma una carta del mazo
-    void mostrarMano() const;                           // Muestra cartas del crupier
+    virtual void mostrarMano() const;                           // Muestra cartas del crupier
 };
 #endif // CRUPIER_H
